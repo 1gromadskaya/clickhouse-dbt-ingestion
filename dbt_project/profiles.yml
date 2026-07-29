@@ -1,0 +1,12 @@
+clickhouse_profile:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: default
+      host: 127.0.0.1
+      port: 8123
+      user: default
+      password: ""
+      secure: false
+      verify: false

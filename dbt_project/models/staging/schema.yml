@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: default
+    tables:
+      - name: people
+        description: "Parsed astronaut data from Open-Notify API"
+
+models:
+  - name: stg_astros
+    description: "Cleaned staging layer of astronaut data"
+    columns:
+      - name: name
+        description: "First and last name of the astronaut"
+        tests:
+          - not_null
+      - name: craft
+        description: "Name of the spacecraft"
+        tests:
+          - not_null
+      - name: _inserted_at
+        description: "Timestamp when the record was inserted"
+        tests:
+          - not_null
+
+  - name: fct_craft_crew
+    description: "Analytical mart: crew count per spacecraft"
+    columns:
+      - name: craft
+        tests:
+          - unique
+          - not_null
