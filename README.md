@@ -26,9 +26,9 @@ A simple and reliable ELT (Extract, Load, Transform) pipeline that collects data
 ## 📸 Project Results (Screenshots)
 
 ### 1. Target Table `people` (Parsed Data)
-![People Table](images/People Table.png)
+![People Table](images/People_Table.png)
 *Raw JSON successfully parsed and loaded into the relational table.*
 
 ### 2. Analytical Mart `fct_craft_crew` (dbt Model)
-![Craft Crew Mart](images/Craft Crew Mart.png)
+![Craft Crew Mart](images/Craft_Crew_Mart.png)
 *Final aggregated view showing crew counts by spacecraft.*
